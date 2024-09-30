@@ -21,3 +21,5 @@
 *.physicMaterial filter=lfs diff=lfs merge=lfs -text
 *.asset filter=lfs diff=lfs merge=lfs -text
 *.lightmap filter=lfs diff=lfs merge=lfs -text
+
+#"*.png, *.tga, *.psd, *.bmp, *.wav, *.fbx, *.obj, *.blend, *.ma, *.mb, *.mp4, *.mov, *.unity3d, *.prefab, *.anim, *.controller, *.mask, *.mat, *.shader, *.physicMaterial, *.asset, *.lightmap"
