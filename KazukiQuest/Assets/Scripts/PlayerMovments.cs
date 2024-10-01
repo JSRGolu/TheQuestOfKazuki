@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using KazukiQuest;
+using UnityEngine.Rendering;
 
 public class PlayerMovments : MonoBehaviour
 {
@@ -10,10 +11,9 @@ public class PlayerMovments : MonoBehaviour
     private Vector2 adInputs;
     private bool jumpInput = false;
 
+    public float straffeSpeed = 5f;
     public float forwardSpeed = 5f;
-    public float moveDisplacement = 2.5f;
-    private Vector3 targetPosition;
-    private int laneCheck = 0;
+    public float maxDisplacement = 5f;
 
     private Vector3 velocity;
     public float jumpHeight = 2f;
@@ -89,20 +89,11 @@ public class PlayerMovments : MonoBehaviour
 
     private void Move()
     {
-        Vector3 moveDirection = Vector3.forward;
-        characterController.Move(moveDirection * forwardSpeed * Time.deltaTime);
-
-        if (adInputs.x < 0)
-        {
-            MoveLane(false);
-        }
-
-        if (adInputs.x > 0)
-        {
-            MoveLane(true);
-        }
-
-        characterController.Move(new Vector3(targetPosition.x - transform.position.x, 0f, 0f));
+        Vector3 forwardDirection = Vector3.forward;
+        characterController.Move(forwardDirection * forwardSpeed * Time.deltaTime);
+        
+        Vector3 movementDirection = new Vector3(adInputs.x, 0f, 0f).normalized;
+        characterController.Move(movementDirection * straffeSpeed * Time.deltaTime);
     }
 
     private void Jump()
@@ -118,12 +109,5 @@ public class PlayerMovments : MonoBehaviour
         }
 
         characterController.Move(velocity * Time.deltaTime);
-    }
-
-    private void MoveLane(bool moveLane)
-    {
-        laneCheck += (moveLane) ? 1 : -1;
-        laneCheck = Mathf.Clamp(laneCheck, -1, 1);
-        targetPosition = new Vector3(moveDisplacement * (laneCheck), transform.position.y, transform.position.z);
     }
 }
