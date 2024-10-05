@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{70BB6D8A-171E-FEA5-AF1D-B039CFE618CB}|Assembly-CSharp.csproj|e:\\unity\\thequestofkazuki\\kazukiquest\\assets\\scripts\\speeddash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70BB6D8A-171E-FEA5-AF1D-B039CFE618CB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\speeddash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{70BB6D8A-171E-FEA5-AF1D-B039CFE618CB}|Assembly-CSharp.csproj|e:\\unity\\thequestofkazuki\\kazukiquest\\assets\\scripts\\playercontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70BB6D8A-171E-FEA5-AF1D-B039CFE618CB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,40 +23,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SpeedDash.cs",
-              "DocumentMoniker": "E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\Assets\\Scripts\\SpeedDash.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\SpeedDash.cs",
-              "ToolTip": "E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\Assets\\Scripts\\SpeedDash.cs",
-              "RelativeToolTip": "Assets\\Scripts\\SpeedDash.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T17:47:50.735Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "PlayerControls.cs",
               "DocumentMoniker": "E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\Assets\\Scripts\\PlayerControls.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerControls.cs",
               "ToolTip": "E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\Assets\\Scripts\\PlayerControls.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerControls.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAjAAAA",
+              "ViewState": "AQIAADQAAAAAAAAAAAAAAD8AAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-05T15:20:40.884Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "InputHandler.cs",
               "DocumentMoniker": "E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\Assets\\Scripts\\InputHandler.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\InputHandler.cs",
               "ToolTip": "E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\Assets\\Scripts\\InputHandler.cs",
               "RelativeToolTip": "Assets\\Scripts\\InputHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEsAAAAdAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T15:04:32.899Z"
+              "WhenOpened": "2024-10-05T15:04:32.899Z",
+              "EditorCaption": ""
             }
           ]
         }

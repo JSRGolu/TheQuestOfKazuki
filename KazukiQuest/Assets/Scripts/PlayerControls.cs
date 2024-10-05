@@ -1,4 +1,4 @@
-using UnityEditor.Experimental.GraphView;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
@@ -10,9 +10,12 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] private float mouseSensitivity;
     [SerializeField] private float upDownRange;
     [SerializeField] private bool invertYAxis;
+    [SerializeField] private float dashMultiplier;
+    [SerializeField] private float dashTime;
 
     private Vector3 currentMovement = Vector3.zero;
     private float verticalRotation;
+    private float speed;
 
     private InputHandler inputHandler;
     private CharacterController characterController;
@@ -42,7 +45,8 @@ public class PlayerControls : MonoBehaviour
 
     private void HandleMovement()
     {
-        float speed = walkSpeed * (inputHandler.SprintValue > 0 ? sprintMultiplier : 1f);
+        HandleSpeedDash();
+        speed = walkSpeed * (inputHandler.SprintValue > 0 ? sprintMultiplier : 1f);
         Vector3 inputDirection = new Vector3(inputHandler.MoveInput.x, 0f, inputHandler.MoveInput.y);
         Vector3 worldDirection = transform.forward * inputDirection.z + transform.right * inputDirection.x;
         worldDirection.Normalize();
@@ -57,7 +61,7 @@ public class PlayerControls : MonoBehaviour
         if(characterController.isGrounded)
         {
             currentMovement.y = -0.5f;
-            if(inputHandler.JumpTriggred)
+            if(inputHandler.JumpTriggred && !inputHandler.dashTriggred)
             {
                 currentMovement.y = jumpForce;
             }
@@ -65,6 +69,24 @@ public class PlayerControls : MonoBehaviour
         else
         {
             currentMovement.y -= gravity * Time.deltaTime;
+        }
+    }
+
+    private void HandleSpeedDash()
+    {
+        if(inputHandler.dashTriggred && !inputHandler.JumpTriggred)
+        {
+            StartCoroutine(Dash());
+        }
+    }
+
+    IEnumerator Dash()
+    {
+        float startTime = Time.time;
+        while(Time.time < startTime + dashTime)
+        {
+            characterController.Move(currentMovement * dashMultiplier * Time.deltaTime);
+            yield return null;
         }
     }
 }
