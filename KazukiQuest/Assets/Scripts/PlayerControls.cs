@@ -3,13 +3,17 @@ using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
 {
+    [Header("Movement")]
     [SerializeField] private float walkSpeed;
     [SerializeField] private float sprintMultiplier;
+    [Header("Jumpping")]
     [SerializeField] private float jumpForce;
-    [SerializeField] private float gravity = 9.8f;
+    [SerializeField] private float gravity;
+    [Header("Mouse Sensitivity")]
     [SerializeField] private float mouseSensitivity;
     [SerializeField] private float upDownRange;
     [SerializeField] private bool invertYAxis;
+    [Header("Dash Ability")]
     [SerializeField] private float dashMultiplier;
     [SerializeField] private float dashTime;
     [SerializeField] private float dashCooldown;
@@ -18,7 +22,7 @@ public class PlayerControls : MonoBehaviour
     private float verticalRotation;
     private float speed;
     private float nextDashTime;
-    [SerializeField] private bool canDash;
+    private bool canJump = true;
 
     private InputHandler inputHandler;
     private CharacterController characterController;
@@ -61,13 +65,19 @@ public class PlayerControls : MonoBehaviour
 
     private void HandleJump()
     {
+        if(!inputHandler.JumpTriggred)
+        {
+            canJump = true;
+        }
         if(characterController.isGrounded)
         {
             currentMovement.y = -0.5f;
-            if(inputHandler.JumpTriggred && !inputHandler.dashTriggred)
+            if(inputHandler.JumpTriggred && !inputHandler.dashTriggred && canJump)
             {
                 currentMovement.y = jumpForce;
+                canJump = false;
             }
+            HandleGlide();
         }
         else
         {
@@ -75,10 +85,14 @@ public class PlayerControls : MonoBehaviour
         }
     }
 
+    private void HandleGlide()
+    {
+
+    }
+
     private void HandleSpeedDash()
     {
-        canDash = Time.time > nextDashTime ? true : false;
-        if(inputHandler.dashTriggred && !inputHandler.JumpTriggred)
+        if(inputHandler.dashTriggred && !inputHandler.JumpTriggred && Time.time > nextDashTime)
         {
             StartCoroutine(Dash());
             nextDashTime = Time.time + dashCooldown;

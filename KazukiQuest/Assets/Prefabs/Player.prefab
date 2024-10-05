@@ -468,6 +468,7 @@ GameObject:
   m_Component:
   - component: {fileID: 602584413092966433}
   - component: {fileID: 342639328174940959}
+  - component: {fileID: 3073876718222496966}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -520,3 +521,26 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3073876718222496966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4390780402192564521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 837a2a5f2099030409311fcde01e0af3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSpeed: 3
+  sprintMultiplier: 2
+  jumpForce: 4
+  gravity: 9.8
+  glideGravity: 0.2
+  mouseSensitivity: 0.05
+  upDownRange: 50
+  invertYAxis: 1
+  dashMultiplier: 10
+  dashTime: 0.25
+  dashCooldown: 5

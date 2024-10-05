@@ -10,12 +10,14 @@ public class InputHandler : MonoBehaviour
     private InputAction sprintAction;
     private InputAction jumpAction;
     private InputAction dashAction;
+    private InputAction glideAction;
 
     public Vector2 MoveInput { get; private set; }
     public Vector2 LookInput { get; private set; }
     public float SprintValue { get; private set; }
     public bool JumpTriggred { get; private set; }
     public bool dashTriggred { get; private set; }
+    public float glideInput { get; private set; }
 
     public static InputHandler Instance { get; private set; }
 
@@ -36,6 +38,7 @@ public class InputHandler : MonoBehaviour
         sprintAction = playerControls.FindActionMap("Player").FindAction("Sprint");
         jumpAction = playerControls.FindActionMap("Player").FindAction("Jump");
         dashAction = playerControls.FindActionMap("Player").FindAction("Dash");
+        glideAction = playerControls.FindActionMap("Player").FindAction("Glide");
 
         RegisterInputAction();
     }
@@ -56,6 +59,9 @@ public class InputHandler : MonoBehaviour
 
         dashAction.performed += context => dashTriggred = true;
         dashAction.canceled += context => dashTriggred = false;
+
+        glideAction.performed += context => glideInput = context.ReadValue<float>();
+        glideAction.canceled += context => glideInput = 0f;
     }
 
     private void OnEnable()
@@ -65,6 +71,7 @@ public class InputHandler : MonoBehaviour
         sprintAction.Enable();
         jumpAction.Enable();
         dashAction.Enable();
+        glideAction.Enable();
     }
 
     private void OnDisable()
@@ -74,5 +81,6 @@ public class InputHandler : MonoBehaviour
         sprintAction.Disable();
         jumpAction.Disable();
         dashAction.Disable();
+        glideAction.Disable();
     }
 }
