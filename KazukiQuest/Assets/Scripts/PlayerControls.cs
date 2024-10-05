@@ -12,10 +12,13 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] private bool invertYAxis;
     [SerializeField] private float dashMultiplier;
     [SerializeField] private float dashTime;
+    [SerializeField] private float dashCooldown;
 
     private Vector3 currentMovement = Vector3.zero;
     private float verticalRotation;
     private float speed;
+    private float nextDashTime;
+    [SerializeField] private bool canDash;
 
     private InputHandler inputHandler;
     private CharacterController characterController;
@@ -74,9 +77,11 @@ public class PlayerControls : MonoBehaviour
 
     private void HandleSpeedDash()
     {
+        canDash = Time.time > nextDashTime ? true : false;
         if(inputHandler.dashTriggred && !inputHandler.JumpTriggred)
         {
             StartCoroutine(Dash());
+            nextDashTime = Time.time + dashCooldown;
         }
     }
 
