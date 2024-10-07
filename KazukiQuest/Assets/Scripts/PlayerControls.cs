@@ -17,11 +17,16 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] private float dashMultiplier;
     [SerializeField] private float dashTime;
     [SerializeField] private float dashCooldown;
+    [Header("Draft Ability")]
+    [SerializeField] private float draftForce;
+    [SerializeField] private float draftTime;
+    [SerializeField] private float draftCooldown;
 
     private Vector3 currentMovement = Vector3.zero;
     private float verticalRotation;
     private float speed;
     private float nextDashTime;
+    private float nextDraftTime;
     private bool canJump = true;
 
     private InputHandler inputHandler;
@@ -52,6 +57,7 @@ public class PlayerControls : MonoBehaviour
 
     private void HandleMovement()
     {
+        HandleDraft();
         HandleSpeedDash();
         speed = walkSpeed * (inputHandler.SprintValue > 0 ? sprintMultiplier : 1f);
         Vector3 inputDirection = new Vector3(inputHandler.MoveInput.x, 0f, inputHandler.MoveInput.y);
@@ -77,7 +83,6 @@ public class PlayerControls : MonoBehaviour
                 currentMovement.y = jumpForce;
                 canJump = false;
             }
-            HandleGlide();
         }
         else
         {
@@ -85,9 +90,13 @@ public class PlayerControls : MonoBehaviour
         }
     }
 
-    private void HandleGlide()
+    private void HandleDraft()
     {
-
+        if(inputHandler.draftTriggred && Time.time > nextDraftTime)
+        {
+            StartCoroutine(Draft());
+            nextDraftTime = Time.time + draftCooldown;
+        }
     }
 
     private void HandleSpeedDash()
@@ -105,6 +114,18 @@ public class PlayerControls : MonoBehaviour
         while(Time.time < startTime + dashTime)
         {
             characterController.Move(currentMovement * dashMultiplier * Time.deltaTime);
+            yield return null;
+        }
+    }
+
+    IEnumerator Draft()
+    {
+        float startTime = Time.time;
+        while (Time.time < startTime + draftTime)
+        {
+            Vector3 draftPos = currentMovement;
+            draftPos.y += draftForce;
+            characterController.Move(draftPos * Time.deltaTime);
             yield return null;
         }
     }

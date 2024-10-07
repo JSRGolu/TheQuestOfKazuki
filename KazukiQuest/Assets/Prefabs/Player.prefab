@@ -535,12 +535,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 3
   sprintMultiplier: 2
-  jumpForce: 4
+  jumpForce: 5
   gravity: 9.8
-  glideGravity: 0.2
   mouseSensitivity: 0.05
   upDownRange: 50
   invertYAxis: 1
   dashMultiplier: 10
   dashTime: 0.25
   dashCooldown: 5
+  draftForce: 50
+  draftTime: 0.25
+  draftCooldown: 5
