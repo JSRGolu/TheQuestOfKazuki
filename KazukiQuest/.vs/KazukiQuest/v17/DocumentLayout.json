@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{70BB6D8A-171E-FEA5-AF1D-B039CFE618CB}|Assembly-CSharp.csproj|e:\\unity\\thequestofkazuki\\kazukiquest\\assets\\scripts\\playercontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70BB6D8A-171E-FEA5-AF1D-B039CFE618CB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{70BB6D8A-171E-FEA5-AF1D-B039CFE618CB}|Assembly-CSharp.csproj|e:\\unity\\thequestofkazuki\\kazukiquest\\assets\\scripts\\playerstatemachine\\dashstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70BB6D8A-171E-FEA5-AF1D-B039CFE618CB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerstatemachine\\dashstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{70BB6D8A-171E-FEA5-AF1D-B039CFE618CB}|Assembly-CSharp.csproj|E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\assets\\scripts\\inputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70BB6D8A-171E-FEA5-AF1D-B039CFE618CB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70BB6D8A-171E-FEA5-AF1D-B039CFE618CB}|Assembly-CSharp.csproj|E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\assets\\scripts\\playerstatemachine\\basestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70BB6D8A-171E-FEA5-AF1D-B039CFE618CB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerstatemachine\\basestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70BB6D8A-171E-FEA5-AF1D-B039CFE618CB}|Assembly-CSharp.csproj|E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\assets\\scripts\\playerstatemachine\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70BB6D8A-171E-FEA5-AF1D-B039CFE618CB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerstatemachine\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70BB6D8A-171E-FEA5-AF1D-B039CFE618CB}|Assembly-CSharp.csproj|E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\assets\\scripts\\playerstatemachine\\idlestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70BB6D8A-171E-FEA5-AF1D-B039CFE618CB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerstatemachine\\idlestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70BB6D8A-171E-FEA5-AF1D-B039CFE618CB}|Assembly-CSharp.csproj|E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\assets\\scripts\\playerstatemachine\\walkstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70BB6D8A-171E-FEA5-AF1D-B039CFE618CB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerstatemachine\\walkstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70BB6D8A-171E-FEA5-AF1D-B039CFE618CB}|Assembly-CSharp.csproj|E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\assets\\scripts\\playerstatemachine\\jumpstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70BB6D8A-171E-FEA5-AF1D-B039CFE618CB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerstatemachine\\jumpstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +43,79 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PlayerControls.cs",
-              "DocumentMoniker": "E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\Assets\\Scripts\\PlayerControls.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerControls.cs",
-              "ToolTip": "E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\Assets\\Scripts\\PlayerControls.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlayerControls.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAASAAAA",
+              "Title": "DashState.cs",
+              "DocumentMoniker": "E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\Assets\\Scripts\\PlayerStateMachine\\DashState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerStateMachine\\DashState.cs",
+              "ToolTip": "E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\Assets\\Scripts\\PlayerStateMachine\\DashState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerStateMachine\\DashState.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T15:20:40.884Z",
+              "WhenOpened": "2024-10-24T06:05:17.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "JumpState.cs",
+              "DocumentMoniker": "E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\Assets\\Scripts\\PlayerStateMachine\\JumpState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerStateMachine\\JumpState.cs",
+              "ToolTip": "E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\Assets\\Scripts\\PlayerStateMachine\\JumpState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerStateMachine\\JumpState.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T03:42:29.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WalkState.cs",
+              "DocumentMoniker": "E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\Assets\\Scripts\\PlayerStateMachine\\WalkState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerStateMachine\\WalkState.cs",
+              "ToolTip": "E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\Assets\\Scripts\\PlayerStateMachine\\WalkState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerStateMachine\\WalkState.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T03:39:37.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IdleState.cs",
+              "DocumentMoniker": "E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\Assets\\Scripts\\PlayerStateMachine\\IdleState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerStateMachine\\IdleState.cs",
+              "ToolTip": "E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\Assets\\Scripts\\PlayerStateMachine\\IdleState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerStateMachine\\IdleState.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T03:27:59.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\Assets\\Scripts\\PlayerStateMachine\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerStateMachine\\PlayerController.cs",
+              "ToolTip": "E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\Assets\\Scripts\\PlayerStateMachine\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerStateMachine\\PlayerController.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAAAFcAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T03:25:28.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BaseState.cs",
+              "DocumentMoniker": "E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\Assets\\Scripts\\PlayerStateMachine\\BaseState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerStateMachine\\BaseState.cs",
+              "ToolTip": "E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\Assets\\Scripts\\PlayerStateMachine\\BaseState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerStateMachine\\BaseState.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T03:24:48.732Z",
               "EditorCaption": ""
             },
             {
@@ -41,7 +126,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\InputHandler.cs",
               "ToolTip": "E:\\Unity\\TheQuestofKazuki\\KazukiQuest\\Assets\\Scripts\\InputHandler.cs",
               "RelativeToolTip": "Assets\\Scripts\\InputHandler.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAAAFEAAAAdAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-05T15:04:32.899Z",
               "EditorCaption": ""
